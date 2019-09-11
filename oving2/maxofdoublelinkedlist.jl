@@ -1,13 +1,14 @@
 function maxofdoublelinkedlist(linkedlist)
-    maxi = linkedlist.value
+    maximum = linkedlist.value
     node = linkedlist
     while (node.next != nothing)
-        maxi = max(maxi, node.next.value)
+        maximum = max(maximum, node.next.value)
         node = node.next
     end
+    node = linkedlist
     while (node.prev != nothing)
-        maxi = max(maxi, node.prev.value)
+        maximum = max(maximum, node.prev.value)
         node = node.prev
     end
-    return maxi
+    return maximum
 end
